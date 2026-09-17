@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Wishes Website</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#16002f,#4b0875,#18002d);
+    color:white;
+    min-height:100vh;
+    padding:30px 15px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#ddd;
+    margin-bottom:35px;
+    font-size:17px;
+}
+
+.plans{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    color:#222;
+    border-radius:22px;
+    padding:28px 20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h2{
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:38px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.card ul{
+    list-style:none;
+    text-align:left;
+    margin:20px 0;
+}
+
+.card li{
+    padding:8px 0;
+    border-bottom:1px solid #eee;
+}
+
+.card li::before{
+    content:"✓ ";
+    color:#7b00ff;
+    font-weight:bold;
+}
+
+button{
+    border:none;
+    background:#7b00ff;
+    color:white;
+    padding:13px 25px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    width:100%;
+}
+
+.standard{
+    border:4px solid #7b00ff;
+    transform:scale(1.03);
+}
+
+.badge{
+    background:#7b00ff;
+    color:white;
+    padding:7px 15px;
+    border-radius:20px;
+    display:inline-block;
+    margin-bottom:10px;
+    font-size:13px;
+}
+
+.note{
+    margin-top:35px;
+    color:#ccc;
+}
+
+@media(max-width:750px){
+    .plans{
+        grid-template-columns:1fr;
+    }
+
+    .standard{
+        transform:none;
+    }
+
+    h1{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎂 Birthday Wishes</h1>
+
+<p class="subtitle">
+Make their birthday more special with a beautiful personalized website ❤️
+</p>
+
+<div class="plans">
+
+<!-- BASIC -->
+<div class="card">
+
+<h2>🎁 Basic</h2>
+
+<div class="price">₹49</div>
+
+<ul>
+<li>Name + Birthday Message</li>
+<li>1 Photo</li>
+<li>Simple Birthday Theme</li>
+<li>Mobile Friendly</li>
+</ul>
+
+<button onclick="order('Basic')">
+Order Now
+</button>
+
+</div>
+
+
+<!-- STANDARD -->
+<div class="card standard">
+
+<div class="badge">⭐ MOST POPULAR</div>
+
+<h2>💝 Standard</h2>
+
+<div class="price">₹99</div>
+
+<ul>
+<li>Name + Birthday Message</li>
+<li>1 Photo</li>
+<li>Animated Theme</li>
+<li>Background Music</li>
+<li>Beautiful Effects</li>
+</ul>
+
+<button onclick="order('Standard')">
+Order Now
+</button>
+
+</div>
+
+
+<!-- PREMIUM -->
+<div class="card">
+
+<h2>👑 Premium</h2>
+
+<div class="price">₹149</div>
+
+<ul>
+<li>Name + Birthday Message</li>
+<li>Multiple Photos</li>
+<li>Animated Theme</li>
+<li>Background Music</li>
+<li>Birthday Countdown</li>
+<li>Shareable Link</li>
+</ul>
+
+<button onclick="order('Premium')">
+Order Now
+</button>
+
+</div>
+
+</div>
+
+<p class="note">
+✨ Custom • Creative • Affordable ✨
+</p>
+
+</div>
+
+
+<script>
+
+function order(plan){
+
+    alert(
+        "You selected the " + plan +
+        " Birthday Website 🎂"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
